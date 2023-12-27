@@ -43,7 +43,7 @@ export default function pugPlugin(options?: PluginOptions, locals?: LocalsObject
     },
 
     transformIndexHtml: {
-      transform(html, { server, filename: htmlfile }) {
+      handler(html, { server, filename: htmlfile }) {
         return pugs(
           html,
           filename => {
